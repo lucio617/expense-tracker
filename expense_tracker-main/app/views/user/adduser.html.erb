@@ -1,0 +1,45 @@
+<div style="width:100%; height:100%; display:flex; justify-content:center; margin-top:5%; ">
+    <div style="border-style:solid;padding:50px">
+<h1>Add Users</h1>
+<%= form_with url: "/add" do |form|%>
+
+
+<div class="mb-3">
+    <%= form.label :Name%>
+    <%= form.text_field :name %>
+</div>
+<br>
+<div class="mb-3">
+<%= form.label :Email %>
+<%= form.text_field :email %>
+</div>
+<br>
+<div class="mb-3">
+    <%= form.label :Department%>
+    <%= form.text_field :department%>
+</div>
+<br>
+<div class="mb-3">
+<%= form.label :Password %>
+<%= form.text_field :password %>
+</div>
+<br>
+<div class="mb-3">
+<%= form.label :Status %>
+<%= form.text_field :status %>
+</div>
+<br>
+<div class="mb-3">
+<%= form.label "User Kind" %>
+<%= form.text_field :u_kind %>
+</div>
+<br>
+
+
+<%= form.submit "Add" ,class: "btn btn-primary"%>&nbsp; &nbsp; &nbsp;
+<br>
+<br>
+<%= link_to "Back","/admin",class: "btn btn-primary"%>&nbsp; &nbsp; &nbsp;
+<%= link_to "Log In","/signin",class: "btn btn-primary" %>&nbsp; &nbsp; &nbsp;
+<%end%>
+</div>
